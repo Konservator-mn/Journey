@@ -1,0 +1,231 @@
+.login-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    align-self: center;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 500px;
+    font-size: 18px;
+}
+.login-wrap>* {
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.login-wrap>*:first-child {
+    margin-top: 25px;
+}
+.login-wrap>*:last-child {
+    margin-bottom: 30px;
+}
+.login-wrap>form {
+    display: flex;
+    flex-direction: column;
+}
+.switch-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.switch-form>span:first-child:not(.selected):before{
+    display: inline-block;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: rgb(60, 184, 120);
+    margin-right: 42px;
+}
+
+.switch-form>span:last-child:not(.selected):after{
+    display: inline-block;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: rgb(60, 184, 120);
+    margin-left: 42px;
+}
+.switch-form .selected {
+    cursor: none;
+    color: rgb(60, 184, 120);
+    font-size: 14px;
+}
+.selected:first-child{
+    padding-left: 60px;
+}
+.selected:last-child{
+    padding-right: 60px;
+}
+
+.login-sources {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+.login-sources>button {
+    width: 155px;
+    height: 46px;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+}
+.login-sources>button:hover {
+    cursor: pointer;
+}
+.login-sources>button:first-child {
+    background-color: rgb(48, 93, 184);
+}
+
+.login-sources>button:last-child {
+    background-color: rgb(223, 74, 50);
+}
+
+.login-sources button span:first-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.login-sources button span:last-child {
+    flex-grow: 1;
+}
+
+.login-sources button:first-child span:first-child {
+    background-image: url("../img/icons/facebook.png");
+}
+
+.login-sources button:last-child span:first-child {
+    background-image: url("../img/icons/google.png");
+}
+
+.hor-line {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.hor-line>span{
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    color: rgb(150, 150, 150);
+}
+
+.hor-line>span:before, .hor-line>span:after {
+    display: block;
+    height: 0px;
+    content: "";
+    flex-grow: 1;
+    border-radius: 2px;
+    border-top: 1px solid rgb(200, 200, 200);
+    border-bottom: 1px solid rgb(200, 200, 200);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.login-form>input:not([type="submit"]){
+    border: 1px solid rgb(200, 200, 200);
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+
+.login-form>input[type="checkbox"]:checked,
+.login-form>input[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.login-form>input[type="checkbox"]:checked + label,
+.login-form>input[type="checkbox"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.login-form>input[type="checkbox"]:checked + label:before,
+.login-form>input[type="checkbox"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+.login-form>input[type="checkbox"]:checked + label:after,
+.login-form>input[type="checkbox"]:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.login-form>input[type="checkbox"]:checked + label:after,
+.login-form>input[type="checkbox"]:not(:checked) + label:after {
+    left: 3px;
+    top: 4px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 4px solid rgb(60, 184, 120);
+    border-bottom: 4px solid rgb(60, 184, 120);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.login-form>input[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+}
+
+.login-form>input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+
+.login-form>input[type="submit"] {
+    margin-top: 10px;
+    background-color: rgb(60, 184, 120);
+    border: none;
+    height: 40px;
+    font-size: 18px;
+    color: #fff;
+    box-shadow: none;
+    border-radius: 3px;
+}
+.login-form label a{
+    color: rgb(60, 184, 120);
+}
+
+.login-form>input[type="submit"]:hover {
+    cursor: pointer;
+}

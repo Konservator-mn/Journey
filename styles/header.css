@@ -1,0 +1,68 @@
+.head {
+    color: #fff;
+    height: 55px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    padding-left: 80px;
+    padding-right: 74px;
+    align-self: flex-start;
+}
+
+.head>.logo {
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+.head>.logo:hover {
+    color: rgb(60, 184, 120);
+}
+.head>div{
+    display: flex;
+}
+.icons {
+    width: 123px;
+    padding-right: 25px;
+    margin-right: 25px;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icons > * {
+    background-position: center 0;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.icons > *:hover{
+    background-position-y: 100%;
+}
+.icons>.calendar {
+    width: 19px;
+    height: 19px;
+    background-image: url("../img/icons/calendar.png");
+}
+.icons>.forum {
+    width: 28px;
+    height: 20px;
+    background-image: url("../img/icons/forum.png");
+}
+.icons>.journey {
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/icons/journey.png");
+}
+.login-invatation>span {
+    color: rgb(60, 184, 120);
+}
+.login-invatation:hover {
+    cursor: none;
+}
+.login-invatation>span:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Journey</title>
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/login.css">
+</head>
+<body>
+<div class="wrap">
+    <header class="head">
+        <a class="logo" href="#">JOURNEY</a>
+        <div>
+            <div class="icons">
+                <div class="calendar"></div>
+                <div class="forum"></div>
+                <div class="journey"></div>
+            </div>
+
+            <div class="login-invatation">
+                Welcome, <span>Log In</span> or <span>Sign Up</span>
+            </div>
+        </div>
+    </header>
+    <div class="login-wrap">
+        <div class="switch-form">
+            <span >Sign Up</span>
+            <span class="selected">Log In</span>
+        </div>
+        <div class="login-sources">
+            <button>
+                <span></span>
+                <span>Facebook</span>
+            </button>
+            <button>
+                <span></span>
+                <span>Google</span>
+            </button>
+        </div>
+        <div class="hor-line">
+            <span>or</span>
+        </div>
+        <form class="login-form" autocomplete="off" action="/login" method="post">
+            <input type="text" name="name" placeholder="First Name">
+            <input type="text" name="surname" placeholder="Last Name">
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="pas1" placeholder="Choose Password">
+            <input type="password" name="pas2" placeholder="Confirm Password">.
+            <input type="checkbox" id="terms"><label for="terms">Agree our <a href="/terms.pdf">Terms & Conditions</a></label>
+            <input type="submit" value="Create Acount">
+        </form>
+    </div>
+    
+</div>
+<script>
+    sizes();
+    window.onresize = sizes;
+    function sizes() {
+        let container = document.getElementsByClassName('wrap')[0];
+        container.style.width = window.innerWidth +'px';
+        container.style.height = window.innerHeight +'px';
+    }
+</script>
+</body>
+</html>
